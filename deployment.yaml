@@ -1,12 +1,11 @@
 kind: Pod
-metadata:
+ metadata:
   labels:
     run: samplejava
   name: samplejava
-spec:
+ spec:
   containers:
   - image: kshamama/samplejava:1
     name: samplejava
     ports:
     - containerPort: 8080
-  restartPolicy: Always
