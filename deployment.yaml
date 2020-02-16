@@ -1,19 +1,12 @@
-apiVersion: apps/v1
-kind: Deployment
+kind: Pod
 metadata:
+  labels:
+    run: samplejava
   name: samplejava
 spec:
-  replicas: 3
-  selector:
-    matchLabels:
-      run: samplejava
-  template:
-    metadata:
-      labels:
-        run: samplejava
-    spec:
-      containers:
-      - image: kshamama/samplejava:1
-        name: samplejava
-        ports:
-        - containerPort: 8080
+  containers:
+  - image: kshamama/samplejava:1
+    name: samplejava
+    ports:
+    - containerPort: 8080
+  restartPolicy: Always
