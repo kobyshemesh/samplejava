@@ -1,19 +1,14 @@
 apiVersion: apps/v1
- kind: Deployment
- metadata:
-  creationTimestamp: null
-  labels:
-    run: samplejava
+kind: Deployment
+metadata:
   name: samplejava
- spec:
+spec:
   replicas: 3
   selector:
     matchLabels:
       run: samplejava
-  strategy: {}
   template:
     metadata:
-      creationTimestamp: null
       labels:
         run: samplejava
     spec:
@@ -22,5 +17,3 @@ apiVersion: apps/v1
         name: samplejava
         ports:
         - containerPort: 8080
-        resources: {}
-status: {}
