@@ -8,7 +8,7 @@ pipeline {
                     namespace = 'dev-v1'
                     echo "Deploying application to ${namespace} namespace"
                     sh ("kubectl apply -f https://raw.githubusercontent.com/kobyshemesh/samplejava/master/deployment.yaml -n ${namespace}")
-                    sh ("kubectl apply -f https://github.com/kobyshemesh/samplejava/blob/master/loadbalancer.yaml -n ${namespace}")
+                    sh ("kubectl apply -f https://raw.githubusercontent.com/kobyshemesh/samplejava/master/loadbalancer.yaml -n ${namespace}")
                 }
             }
      }
