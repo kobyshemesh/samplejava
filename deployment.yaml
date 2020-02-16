@@ -18,7 +18,7 @@ spec:
         run: samplejava
     spec:
       containers:
-      - image: kshamama/samplejava:latest
+      - image: kshamama/samplejava:1
         name: samplejava
         ports:
         - containerPort: 8080
