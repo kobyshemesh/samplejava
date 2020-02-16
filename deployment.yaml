@@ -1,17 +1,26 @@
-apiVersion: v1
-kind: Service
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
     run: samplejava
-  name: samplejavalb
+  name: samplejava
 spec:
-  ports:
-  - port: 80
-    protocol: TCP
-    targetPort: 8080
+  replicas: 3
   selector:
-    run: samplejava
-  type: LoadBalancer
-status:
-  loadBalancer: {}
+    matchLabels:
+      run: samplejava
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        run: samplejava
+    spec:
+      containers:
+      - image: kshamama/samplejava:1
+        name: samplejava
+        ports:
+        - containerPort: 8080
+        resources: {}
+status: {}
