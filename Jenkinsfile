@@ -1,5 +1,7 @@
 pipeline {
+ stages{
   stage('Deploy to dev') {
+    
             steps {
                 script {
                     namespace = 'dev-v1'
@@ -9,4 +11,5 @@ pipeline {
                 }
             }
      }
+ }
 }
