@@ -1,9 +1,8 @@
+apiVersion: v1
 kind: Pod
- metadata:
-  labels:
-    run: samplejava
+metadata:
   name: samplejava
- spec:
+spec:
   containers:
   - image: kshamama/samplejava:1
     name: samplejava
