@@ -1,11 +1,11 @@
 apiVersion: apps/v1
-kind: Deployment
-metadata:
+ kind: Deployment
+ metadata:
   creationTimestamp: null
   labels:
     run: samplejava
   name: samplejava
-spec:
+ spec:
   replicas: 3
   selector:
     matchLabels:
