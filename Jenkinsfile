@@ -8,7 +8,7 @@ pipeline {
                     echo "Deploying application to ${namespace} namespace"
                     withKubeConfig([credentialsId: 'elsegundo-cluster']){
                         sh ("kubectl apply -f https://raw.githubusercontent.com/kobyshemesh/samplejava/master/deployment.yaml -n ${namespace}")
-                        sh ("kubectl apply -f https://raw.githubusercontent.com/kobyshemesh/samplejava/master/loadbalancer.yaml -n ${namespace}")
+                        //sh ("kubectl apply -f https://raw.githubusercontent.com/kobyshemesh/samplejava/master/loadbalancer.yaml -n ${namespace}")
                      }
                  
                 }
